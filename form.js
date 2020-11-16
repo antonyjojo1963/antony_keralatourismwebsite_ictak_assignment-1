@@ -36,11 +36,19 @@ function validate(){
         return false;
     }
     
-    else if(Phone.value.length!=10 || Phone.value.length > 10 || Phone.value.length <10){
-        alert("Invalid Phone Number");
+    else if(Phone.value ==""){
+        alert("Number needs to be filled");
+        return false;
+    }
+    else if(isNaN(Phone.value)){
+        alert("Invalid number");
         return false;
     }    
-
+    
+    else if(Phone.value.length > 10 || Phone.value.length <10){
+        alert("Invalid Phone Number");
+        return false;
+    } 
 
     else{
         return true;
