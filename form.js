@@ -5,6 +5,12 @@ let pass1 = document.getElementById("pass1");
 // console.log("hi")
 
 function validate(){
+    let regexp = /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3}?$/
+    
+    if(email.value!=regexp){
+        alert("Invalid Format");
+        return false;
+    }
     if(email.value.trim==""){
         alert("Fields cannot be empty");
         return false;
