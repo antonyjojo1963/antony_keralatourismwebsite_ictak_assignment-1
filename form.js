@@ -2,7 +2,7 @@ let email = document.getElementById("email");
 let pass = document.getElementById("pass");
 let pass1 = document.getElementById("pass1");
 
-console.log("hi")
+// console.log("hi")
 
 function validate(){
     if(email.value.trim==""){
@@ -15,13 +15,13 @@ function validate(){
     }
     else if(pass.value.length<=5){
         alert("Password is too Short");
-        pwd.style.border="2px solid red";
+        pass.style.border="2px solid red";
         return false;
     }
 
     else if (pass1.value != pass.value) {
         alert("Password does not Match ");
-        pwd1.style.border="2px solid red";
+        pass1.style.border="2px solid red";
         return false;
     }
 
