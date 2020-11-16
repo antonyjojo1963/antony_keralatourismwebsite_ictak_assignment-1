@@ -1,6 +1,7 @@
 let email = document.getElementById("email");
 let pass = document.getElementById("pass");
 let pass1 = document.getElementById("pass1");
+let Phone = document.getElementByID("Phone");
 
 // console.log("hi")
 
@@ -23,7 +24,7 @@ function validate(){
         alert("Password cannot be empty");
         return false;
     }
-    else if(pass.value.length<=5){
+    else if(pass.value.length<8|| pass.value.length>8){
         alert("Password is too Short");
         pass.style.border="2px solid red";
         return false;
@@ -34,6 +35,11 @@ function validate(){
         pass1.style.border="2px solid red";
         return false;
     }
+    
+    else if(Phone.value.length!=10 || Phone.value.length > 10 || Phone.value.length <10){
+        alert("Invalid Phone Number");
+        return false;
+    }    
 
 
     else{
